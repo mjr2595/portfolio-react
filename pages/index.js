@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiOutlineTwitter, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/legacy/image";
@@ -44,9 +45,15 @@ export default function Home() {
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">&#60;Coder &#47;&#62;</h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-xl max-w-lg mx-auto">Code, Coffee, Cattlestar Calactica</p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <AiOutlineTwitter />
-              <AiFillLinkedin />
-              <AiFillGithub />
+              <Link href="https://www.twitter.com" target={"_blank"}>
+                <AiOutlineTwitter />
+              </Link>
+              <Link href="https://www.linkedin.com" target={"_blank"}>
+                <AiFillLinkedin />
+              </Link>
+              <Link href="https://www.github.com" target={"_blank"}>
+                <AiFillGithub />
+              </Link>
             </div>
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image src={deved} layout="fill" objectFit="cover" alt="picture of me" />
@@ -67,7 +74,7 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <Image src={design} width={100} height={100} alt="3d logo" />
               <h3 className="text-lg font-medium pt-8 pb-2">Pretty. Good. Designs.</h3>
-              <p className="py-2">They are really nice ok. Seriously I mean look at that thing.</p>
+              <p className="py-2">They are really nice ok. Seriously I mean look at that thing. Adding more text so this div is bigger.</p>
               <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
               <p className="text-gray-800 py-1">Gimp</p>
               <p className="text-gray-800 py-1">MS Paint</p>
@@ -128,6 +135,11 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+        <p className="text-sm py-5 leading-8 text-gray-800 dark:text-gray-200 md:text-md text-center mx-auto">
+          Over-engineered with Next.js and Tailwind ❤️
+        </p>
+      </footer>
     </div>
   );
 }
